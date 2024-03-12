@@ -7,33 +7,31 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+interface SkillImageData {
+  images: string;
+}
+
+const SkillImage: SkillImageData[] = [
+  {images: "./icons/html.png"},
+  {images: "./icons/css.png"},
+  {images: "./icons/php.png"},
+  {images: "./icons/javascript.png"},
+  {images: "./icons/react.png"},
+  {images: "./icons/laravel.svg"},
+  {images: "./icons/nextjs.svg"},
+]
+
 const SkillCarousel = () => {
   return (
     <>
       <Carousel>
         <CarouselPrevious />
         <CarouselContent>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/html.png" className=""/>
+          {SkillImage.map((item, index) => (
+            <CarouselItem key={index} className="basis-1/3 text-center justify-center items-center">
+            <img src={item.images} className=""/>
           </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/css.png" className=""/>
-          </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/php.png" className=""/>
-          </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/javascript.png" className=""/>
-          </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/react.png" className=""/>
-          </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/laravel.svg" className=""/>
-          </CarouselItem>
-          <CarouselItem className="basis-1/3 text-center justify-center items-center">
-            <img src="./icons/nextjs.svg" className=""/>
-          </CarouselItem>
+          ))}
         </CarouselContent>
         <CarouselNext />
       </Carousel>
