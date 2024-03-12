@@ -1,14 +1,13 @@
-import SectionOne from "@/components/my_component/sectionOne";
-import SectionTwo from "@/components/my_component/sectionTwo";
+// import SectionOne from "@/components/my_component/sectionOne";
+// import SectionTwo from "@/components/my_component/sectionTwo";
+import {SectionOne, SectionTwo} from "@/components/my_component/section"
 
 export default function Home() {
   return (
     <>
     <main className="container-xl">
-      <div className="flex flex-col">
-        <SectionOne />
-        <SectionTwo />
-      </div>
+      <SectionOne />
+      <SectionTwo />
     </main>
     </>
   );
