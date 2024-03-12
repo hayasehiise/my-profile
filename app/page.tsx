@@ -1,6 +1,4 @@
-// import SectionOne from "@/components/my_component/sectionOne";
-// import SectionTwo from "@/components/my_component/sectionTwo";
-import {SectionOne, SectionTwo, SectionThree} from "@/components/my_component/section"
+import { SectionOne, SectionTwo, SectionThree } from "@/components/my_component/section";
 
 export default function Home() {
   return (
