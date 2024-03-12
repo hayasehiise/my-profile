@@ -30,7 +30,6 @@ const ProjectData: ProjectItem[] = [
 ];
 
 const ProjectCarousel = () => {
-  console.log(ProjectData);
   return (
     <>
       <Carousel orientation="vertical" opts={{ align: "start" }}>
