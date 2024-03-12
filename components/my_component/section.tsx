@@ -86,9 +86,9 @@ export const SectionThree = () => {
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} className="text-white text-xl sm:text-3xl font-extrabold text-center mb-16">
           My Projects
         </motion.p>
-        <div className="flex-initial mx-auto w-1/2">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} className="flex-initial mx-auto w-full sm:w-1/2">
           <ProjectCarousel />
-        </div>
+        </motion.div>
       </section>
     </Section>
   );
