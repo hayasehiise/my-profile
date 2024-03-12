@@ -1,29 +1,27 @@
 "use client";
 
-import React from "react";
 import ProfileCard from "./section_component/profileCard";
 import SectionOneDetail from "./section_component/sectionOneDetail";
-import ButtonContactMe from "./section_component/contactButton";
 import SkillCarousel from "./section_component/skillCarousel";
 import { motion } from "framer-motion";
+import ProjectCarousel from "./section_component/projectCarousel";
+import ButtonProject from "./section_component/projectButton";
 
 type SectionProps = {
-    children: React.ReactNode;
+  children: React.ReactNode;
 };
 const Section = ({ children }: SectionProps) => {
   return (
     <>
-      <div className="flex flex-col">
-        {children}
-      </div>
+      <div className="flex flex-col">{children}</div>
     </>
   );
 };
 
-const SectionOne = () => {
+export const SectionOne = () => {
   return (
     <Section>
-      <section className="flex-auto h-screen sm:h-full mb-72 sm:mb-0">
+      <section className="flex-auto h-screen sm:h-full mb-64 sm:mb-5 sm:mt-5">
         <div className="flex flex-col sm:flex-row w-full sm:h-full justify-center items-center">
           <ProfileCard />
           <SectionOneDetail />
@@ -33,10 +31,10 @@ const SectionOne = () => {
   );
 };
 
-const SectionTwo = () => {
+export const SectionTwo = () => {
   return (
     <Section>
-        <section className="flex-auto mb-10">
+      <section className="flex-auto mb-10">
         <div className="flex flex-col">
           <motion.div
             className="flex-initial mx-auto text-center w-1/4 mb-5"
@@ -73,7 +71,7 @@ const SectionTwo = () => {
             <SkillCarousel />
           </motion.div>
           <div className="flex-initial mx-auto">
-            <ButtonContactMe />
+            <ButtonProject />
           </div>
         </div>
       </section>
@@ -81,4 +79,17 @@ const SectionTwo = () => {
   );
 };
 
-export {SectionOne, SectionTwo};
+export const SectionThree = () => {
+  return (
+    <Section>
+      <section className="flex-auto mb-10 p-10" id="section3">
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} className="text-white text-xl sm:text-3xl font-extrabold text-center mb-16">
+          My Projects
+        </motion.p>
+        <div className="flex-initial mx-auto">
+          <ProjectCarousel />
+        </div>
+      </section>
+    </Section>
+  );
+};
