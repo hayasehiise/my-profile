@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import ProfileCard from "./section_component/profileCard";
 import SectionOneDetail from "./section_component/sectionOneDetail";
 import ButtonContactMe from "./section_component/contactButton";
