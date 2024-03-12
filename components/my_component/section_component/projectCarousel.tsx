@@ -1,12 +1,15 @@
 "use client";
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardHeader, Image } from "@nextui-org/react";
 import Link from "next/link";
 
 const ProjectCarousel = () => {
-  return (
+  return(
     <>
-      <div className="grid grid-cols-2 gap-4">
+    <Carousel orientation="vertical" opts={{ align: "start" }}>
+      <CarouselContent className=" max-h-[400px]">
+        <CarouselItem>
         <div>
           <Link href="https://my-office-project.vercel.app/" target="_blank">
             <Card className="w-full">
@@ -23,6 +26,8 @@ const ProjectCarousel = () => {
             </Card>
           </Link>
         </div>
+        </CarouselItem>
+        <CarouselItem>
         <div>
           <Link href="https://my-office-project.vercel.app/agen" target="_blank">
             <Card className="w-full">
@@ -39,9 +44,13 @@ const ProjectCarousel = () => {
             </Card>
           </Link>
         </div>
-      </div>
+        </CarouselItem>
+      </CarouselContent>
+      <CarouselNext />
+      <CarouselPrevious />
+    </Carousel>
     </>
   );
-};
+}
 
 export default ProjectCarousel;
