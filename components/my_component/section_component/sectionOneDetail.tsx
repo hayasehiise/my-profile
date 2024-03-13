@@ -6,7 +6,7 @@ const SectionOneDetail = () => {
   return (
     <>
       <motion.div
-        className="flex-initial justify-end text-end items-end sm:w-1/3 p-5 mt-52 sm:mt-46 sm:mb-10"
+        className="flex-initial justify-end text-end items-end sm:w-2/3 xl:w-1/3 p-5 mt-52 sm:mt-46 sm:mb-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 3 }}

@@ -22,7 +22,7 @@ export const SectionOne = () => {
   return (
     <Section>
       <section className="flex-auto h-screen sm:h-full mb-64 sm:mb-5 sm:mt-5">
-        <div className="flex flex-col sm:flex-row w-full sm:h-full justify-center items-center">
+        <div className="flex flex-col sm:flex-col xl:flex-row w-full sm:h-full justify-center items-center">
           <ProfileCard />
           <SectionOneDetail />
         </div>
