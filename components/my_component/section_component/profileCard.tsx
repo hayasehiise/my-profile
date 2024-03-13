@@ -10,7 +10,7 @@ const ProfileCard = () => {
           <div className="static bg-white pt-32 pb-5 px-5 rounded-xl text-center items-center justify-center">
             <motion.img
               src="./images/my_image.png"
-              className="absolute top-0 left-9 sm:left-24 xl:-left-2 w-60 -translate-y-1/2 sm:translate-x-0 xl:translate-x-1/2"
+              className="absolute top-0 left-9 sm:left-24 lg:left-[110px] xl:-left-2 2xl:left-20 w-60 -translate-y-1/2 sm:translate-x-0 lg:translate-x-1/2 xl:translate-x-1/2 2xl:translate-x-1/2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
